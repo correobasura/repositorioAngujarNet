@@ -139,6 +139,14 @@
     <Content Include="Content\css\skins\_all-skins.min.css" />
     <Content Include="Content\img\avatar.png" />
     <Content Include="Global.asax" />
+    <Content Include="Models\AppMain.js" />
+    <Content Include="Models\contenido\forms\plantilla.html" />
+    <Content Include="Models\contenido\scripts\app.js" />
+    <Content Include="Models\contenido\scripts\factory.js" />
+    <Content Include="Models\contenido\scripts\main.js" />
+    <Content Include="Models\contenido\scripts\otro.controller.js" />
+    <Content Include="Models\contenido\scripts\Prueba.controller.js" />
+    <Content Include="Models\contenido\scripts\prueba.service.js" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="scripts\angular-animate.js" />
@@ -918,9 +926,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\PruebaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\ClasePrueba.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -950,8 +960,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
