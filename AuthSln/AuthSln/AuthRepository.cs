@@ -2,10 +2,7 @@
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using System.Web;
 
 namespace AuthSln
 {
@@ -25,7 +22,7 @@ namespace AuthSln
         {
             IdentityUser user = new IdentityUser
             {
-                UserName = userModel.UserName
+                UserName = userModel.Usuario
             };
 
             var result = await _userManager.CreateAsync(user, userModel.Password);
