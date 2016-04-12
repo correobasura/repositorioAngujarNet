@@ -24,6 +24,7 @@ namespace AuthSln.API
             {
                 AllowInsecureHttp = true,
                 TokenEndpointPath = new PathString("/token"),
+                //Se indica que el token solamente es válido por un día
                 AccessTokenExpireTimeSpan = TimeSpan.FromDays(1),
                 Provider = new SimpleAuthorizationServerProvider()
             };

@@ -25,17 +25,14 @@
 
                     if (user == null)
                     {
-                        context.SetError("invalid_grant", "The user name or password is incorrect.");
+                        context.SetError("invalid_grant", "El usuario o contraseña no son válidos");
                         return;
                     }
                 }
-
                 var identity = new ClaimsIdentity(context.Options.AuthenticationType);
                 identity.AddClaim(new Claim("sub", context.UserName));
                 identity.AddClaim(new Claim("role", "user"));
-
                 context.Validated(identity);
-
             }
         }
     }
