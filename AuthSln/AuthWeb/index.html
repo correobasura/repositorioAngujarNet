@@ -37,7 +37,7 @@
         </div>
     </div>
     <div class="container">
-        <div data-ng-view="">
+        <div ui-view="content">
         </div>
     </div>
     <hr />
@@ -54,21 +54,21 @@
         </div>
     </div>
     <!-- 3rd party libraries -->
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-route.min.js"></script>
-    <script src="scripts/angular-local-storage.min.js"></script>
-    <script src="scripts/loading-bar.min.js"></script>
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/angular-route.js"></script>
+    <script src="scripts/angular-ui-router.js"></script>
+    <script src="scripts/angular-local-storage.js"></script>
+    <script src="scripts/loading-bar.js"></script>
     <!-- Load app main script -->
     <script src="app/app.js"></script>
+    <script src="app/states/states.js"></script>
     <!-- Load services -->
-    <script src="app/services/authInterceptorService.js"></script>
-    <script src="app/services/authService.js"></script>
-    <script src="app/services/ordersService.js"></script>
+    <script src="app/services/authInterceptor.service.js"></script>
+    <script src="app/services/auth.service.js"></script>
     <!-- Load controllers -->
-    <script src="app/controllers/indexController.js"></script>
-    <script src="app/controllers/homeController.js"></script>
-    <script src="app/controllers/loginController.js"></script>
-    <script src="app/controllers/signupController.js"></script>
-    <script src="app/controllers/ordersController.js"></script>
+    <script src="app/controllers/index.controller.js"></script>
+    <script src="app/controllers/home.controller.js"></script>
+    <script src="app/controllers/login.controller.js"></script>
+    <script src="app/controllers/signup.controller.js"></script>
 </body>
 </html>

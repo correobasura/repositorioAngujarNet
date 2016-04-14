@@ -17,3 +17,4 @@ C:\Users\jhillon\Documents\GitNet2\AuthSln\AuthWeb\bin\Microsoft.CodeDom.Provide
 C:\Users\jhillon\Documents\GitNet2\AuthSln\AuthWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\jhillon\Documents\GitNet2\AuthSln\AuthWeb\obj\Debug\AuthWeb.dll
 C:\Users\jhillon\Documents\GitNet2\AuthSln\AuthWeb\obj\Debug\AuthWeb.pdb
+C:\Users\jhillon\Documents\GitNet2\AuthSln\AuthWeb\obj\Debug\AuthWeb.csprojResolveAssemblyReference.cache
