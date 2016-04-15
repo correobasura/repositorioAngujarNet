@@ -7,7 +7,7 @@ angular.module('AngularAuthApp')
         	$scope.message = "";
 
         	$scope.registration = {
-        		userName: "",
+        		usuario: "",
         		password: "",
         		confirmPassword: ""
         	};
