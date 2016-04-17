@@ -19,6 +19,10 @@ namespace AuthSln.API
             app.UseWebApi(config);
         }
 
+        /// <summary>
+        /// Se realiza la configuración de autorización
+        /// </summary>
+        /// <param name="app"></param>
         public void ConfigureOAuth(IAppBuilder app)
         {
             OAuthAuthorizationServerOptions OAuthServerOptions = new OAuthAuthorizationServerOptions()

@@ -1,29 +1,4 @@
-﻿/*app.config(function ($routeProvider) {
-
-    $routeProvider.when("/home", {
-        controller: "homeController",
-        templateUrl: "/app/views/home.html"
-    });
-
-    $routeProvider.when("/login", {
-        controller: "loginController",
-        templateUrl: "/app/views/login.html"
-    });
-
-    $routeProvider.when("/signup", {
-        controller: "signupController",
-        templateUrl: "/app/views/signup.html"
-    });
-
-    $routeProvider.when("/orders", {
-        controller: "ordersController",
-        templateUrl: "/app/views/orders.html"
-    });
-
-    $routeProvider.otherwise({ redirectTo: "/home" });
-});*/
-
-angular.module('AngularAuthApp')
+﻿angular.module('AngularAuthApp')
     .config(function ($stateProvider, $urlRouterProvider) {
         $urlRouterProvider.otherwise('/home');
         $stateProvider
@@ -51,6 +26,12 @@ angular.module('AngularAuthApp')
                         templateUrl: '/app/views/login.html',
                         controller: 'loginController'
                     }
+                },
+                resolve: {
+                    translatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
+                        $translatePartialLoader.addPart('seleccionarEntidad');
+                        return $translate.refresh();
+                    }]
                 }
             })
             .state('signup', {

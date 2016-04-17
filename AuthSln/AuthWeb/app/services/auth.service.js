@@ -1,6 +1,6 @@
 ﻿'use strict';
 angular.module('AngularAuthApp')
-    .factory('authService', ['$http', '$q', 'localStorageService', function ($http, $q, localStorageService) {
+    .factory('authService', function ($http, $q, localStorageService) {
 
         var serviceBase = 'http://localhost:58871/';
         var authServiceFactory = {};
@@ -70,4 +70,4 @@ angular.module('AngularAuthApp')
         authServiceFactory.authentication = _authentication;
 
         return authServiceFactory;
-    }]);
+    });

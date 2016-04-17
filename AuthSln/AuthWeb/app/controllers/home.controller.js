@@ -1,6 +1,6 @@
 ﻿'use strict';
 angular.module('AngularAuthApp')
-    .controller('homeController', ['$scope',
+    .controller('homeController',
         function ($scope) {
 
-        }]);
+        });

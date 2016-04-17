@@ -4,7 +4,6 @@
     <meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible" />
     <title>AngularJS Authentication</title>
     <link href="content/css/bootstrap.yeti.css" rel="stylesheet" />
-    <link href="content/css/site.css" rel="stylesheet" />
     <link href="content/css/loading-bar.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 </head>
@@ -17,7 +16,7 @@
                 </button>
                 <a class="navbar-brand" href="#/">Home</a>
             </div>
-            <div class="collapse navbar-collapse" data-collapse="!navbarExpanded">
+            <div class="collapse navbar-collapse" data-uib-collapse="!navbarExpanded">
                 <ul class="nav navbar-nav navbar-right">
                     <li data-ng-hide="!authentication.isAuth"><a href="#">Welcome {{authentication.userName}}</a></li>
                     <li data-ng-hide="!authentication.isAuth"><a href="#/orders">My Orders</a></li>
@@ -55,10 +54,32 @@
     </div>
     <!-- 3rd party libraries -->
     <script src="scripts/angular.js"></script>
-    <script src="scripts/angular-route.js"></script>
-    <script src="scripts/angular-ui-router.js"></script>
-    <script src="scripts/angular-local-storage.js"></script>
-    <script src="scripts/loading-bar.js"></script>
+    <script src="scripts/angular-route.min.js"></script>
+    <script src="wwwroot/lib/loading-bar.js"></script>
+    <script src="wwwroot/lib/modernizr/modernizr.js"></script>
+    <script src="wwwroot/lib/jquery/dist/jquery.js"></script>
+    <script src="wwwroot/lib/angular-aria/angular-aria.js"></script>
+    <script src="wwwroot/lib/angular-translate/angular-translate.js"></script>
+    <script src="wwwroot/lib/messageformat/messageformat.js"></script>
+    <script src="wwwroot/lib/angular-translate-interpolation-messageformat/angular-translate-interpolation-messageformat.js"></script>
+    <script src="wwwroot/lib/angular-translate-loader-partial/angular-translate-loader-partial.js"></script>
+    <script src="wwwroot/lib/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
+    <script src="wwwroot/lib/angular-i18n/angular-locale_es.js"></script>
+    <script src="wwwroot/lib/messageformat/locale/es.js"></script>
+    <script src="wwwroot/lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="wwwroot/lib/angular-cache-buster/angular-cache-buster.js"></script>
+    <script src="wwwroot/lib/angular-cookies/angular-cookies.js"></script>
+    <script src="wwwroot/lib/angular-dynamic-locale/src/tmhDynamicLocale.js"></script>
+    <script src="wwwroot/lib/angular-local-storage/dist/angular-local-storage.js"></script>
+    <script src="wwwroot/lib/angular-resource/angular-resource.js"></script>
+    <script src="wwwroot/lib/angular-sanitize/angular-sanitize.js"></script>
+    <script src="wwwroot/lib/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="wwwroot/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="wwwroot/lib/json3/lib/json3.js"></script>
+    <script src="wwwroot/lib/ng-file-upload/ng-file-upload.js"></script>
+    <script src="wwwroot/lib/ngInfiniteScroll/build/ng-infinite-scroll.js"></script>
+    <script src="wwwroot/lib/angular-animate/angular-animate.js"></script>
+    <script src="wwwroot/lib/angucomplete-alt/angucomplete-alt.js"></script>
     <!-- Load app main script -->
     <script src="app/app.js"></script>
     <script src="app/states/states.js"></script>

@@ -1,6 +1,6 @@
 ﻿'use strict';
 angular.module('AngularAuthApp')
-    .controller('signupController', ['$scope', '$location', '$timeout', 'authService',
+    .controller('signupController',
         function ($scope, $location, $timeout, authService) {
 
         	$scope.savedSuccessfully = false;
@@ -36,7 +36,7 @@ angular.module('AngularAuthApp')
         		var timer = $timeout(function () {
         			$timeout.cancel(timer);
         			$location.path('/login');
-        		}, 2000);
+        		}, 5000);
         	}
 
-        }]);
+        });

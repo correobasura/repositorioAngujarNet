@@ -5,7 +5,10 @@ using System.Web;
 
 namespace AuthSln.Models
 {
-    public enum ApplicationTypes
+    /// <summary>
+    /// Estructura que contiene los tipos identificadores de aplicación admitidos
+    /// </summary>
+    public enum TiposAplicacion
     {
         JavaScript = 0,
         NativeConfidential = 1

@@ -1,10 +1,10 @@
 ﻿'use strict';
 angular.module('AngularAuthApp')
-    .controller('loginController', ['$scope', '$location', 'authService',
+    .controller('loginController',
         function ($scope, $location, authService) {
 
             $scope.loginData = {
-                userName: "",
+                usuario: "",
                 password: ""
             };
 
@@ -22,4 +22,4 @@ angular.module('AngularAuthApp')
                  });
             };
 
-        }]);
+        });

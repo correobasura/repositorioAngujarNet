@@ -1,4 +1,5 @@
-﻿using AuthSln.Models;
+﻿using AuthSln.API;
+using AuthSln.Models;
 using Microsoft.Owin.Security.Infrastructure;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,11 @@ namespace AuthSln.Providers
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Método encargado de gestionar la información de tokens
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
         public async Task CreateAsync(AuthenticationTokenCreateContext context)
         {
             var clientid = context.Ticket.Properties.Dictionary["as:client_id"];
@@ -23,28 +29,29 @@ namespace AuthSln.Providers
             {
                 return;
             }
-
+            //Se genera un identificador único para el token
             var refreshTokenId = Guid.NewGuid().ToString("n");
 
-            using (AuthRepository _repo = new AuthRepository())
+            using (AutenticacionRepository _repo = new AutenticacionRepository())
             {
                 var refreshTokenLifeTime = context.OwinContext.Get<string>("as:clientRefreshTokenLifeTime");
 
+                //Se asignan las propiedades del token
                 var token = new RefreshToken()
                 {
                     Id = Helper.GetHash(refreshTokenId),
                     ClientId = clientid,
                     Subject = context.Ticket.Identity.Name,
-                    IssuedUtc = DateTime.UtcNow,
-                    ExpiresUtc = DateTime.UtcNow.AddMinutes(Convert.ToDouble(refreshTokenLifeTime))
+                    FechaEmision = DateTime.UtcNow,
+                    FechaExpiracion = DateTime.UtcNow.AddMinutes(Convert.ToDouble(refreshTokenLifeTime))
                 };
 
-                context.Ticket.Properties.IssuedUtc = token.IssuedUtc;
-                context.Ticket.Properties.ExpiresUtc = token.ExpiresUtc;
+                context.Ticket.Properties.IssuedUtc = token.FechaEmision;
+                context.Ticket.Properties.ExpiresUtc = token.FechaExpiracion;
 
-                token.ProtectedTicket = context.SerializeTicket();
+                token.TicketProtegido = context.SerializeTicket();
 
-                var result = await _repo.AddRefreshToken(token);
+                var result = await _repo.AgregarRefreshToken(token);
 
                 if (result)
                 {
@@ -67,15 +74,15 @@ namespace AuthSln.Providers
 
             string hashedTokenId = Helper.GetHash(context.Token);
 
-            using (AuthRepository _repo = new AuthRepository())
+            using (AutenticacionRepository _repo = new AutenticacionRepository())
             {
-                var refreshToken = await _repo.FindRefreshToken(hashedTokenId);
+                var refreshToken = await _repo.BuscarRefreshToken(hashedTokenId);
 
                 if (refreshToken != null)
                 {
                     //Get protectedTicket from refreshToken class
-                    context.DeserializeTicket(refreshToken.ProtectedTicket);
-                    var result = await _repo.RemoveRefreshToken(hashedTokenId);
+                    context.DeserializeTicket(refreshToken.TicketProtegido);
+                    var result = await _repo.RemoverRefreshToken(hashedTokenId);
                 }
             }
         }
