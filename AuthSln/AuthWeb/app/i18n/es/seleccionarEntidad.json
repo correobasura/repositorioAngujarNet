@@ -1,0 +1,17 @@
+{
+    "ekoguiApp": {
+        "seleccionarEntidad" : {
+            "home": {
+                "title": "Seleccionar entidad"
+            },
+            "detail": {
+                "subtitulo": "Seleccione la entidad la cual desea gestionar",
+                "seleccionPersona":"Seleccione la persona",
+                "nombre": "Nombre"
+            },
+            "validaciones":{
+                "personaSinEntidades":"La persona seleccionada no tiene perfiles activos con ninguna entidad"
+            }
+        }
+    }
+}

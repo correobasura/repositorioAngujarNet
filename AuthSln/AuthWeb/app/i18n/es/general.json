@@ -1,0 +1,145 @@
+﻿{
+    "global": {
+        "title": "ekogui",
+        "browsehappy": "Est\u00E1 utilizando una <strong> versi\u00F3n desactualizada </strong> del navegador. Por favor <a href='http://browsehappy.com/?locale=en'>actualice su navegador</a> para mejorar su experiencia.",
+        "menu": {
+            "home": "Inicio",
+            "entities": {
+                "main": "Entidades",
+                "archivo": "Archivo",
+                "departamento": "Departamento",
+                "municipio": "Municipio",
+                "entidad": "Entidad",
+                "persona": "Persona",
+                "usuario": "Usuario",
+                "personaEntidad": "Persona Entidad",
+                "perfil": "Perfil",
+                "personaEntidadPerfil": "Persona Entidad Perfil",
+                "perfilRelacion": "Perfil Relaci\u00F3n",
+                "perfilAsignacion": "Perfil Asignaci\u00F3n",
+                "matrizPerfiles":"Matriz de Perfiles",
+                "notificacion": "Notificaci\u00F3n",
+                "seleccionEntidad": "Selecci\u00F3n de entidad",
+                "asignacionRolAbogado": "Asignaci\u00F3n Rol Abogado",
+                "tipoParametro": "Tipo Parametro",
+                "parametroDominio": "Par\u00E1metro Dominio",
+                "unidadGestion": "Unidad Gesti\u00F3n",
+                "crearUsuario": "Crear Usuarios",
+                "formacionAcademica": "Formaci\u00F3n Acad\u00E9mica",
+				"editarPerfil": "Editar Perfil",
+				"informacionRolAbogado": "Informaci\u00F3n Rol Abogado",
+				"additionalEntity": "JHipster will add additional entities here (do not translate!)"
+            },
+            "account": {
+                "main": "Cuenta",
+                "settings": "Ajustes",
+                "password": "Clave",
+                "sessions": "Sesiones",
+                "login": "Ingresar",
+                "logout": "Desconectar",
+                "register": "Registro"
+            },
+             "adminPerfil": {
+                "adminPerfil": "Administraci\u00F3n de Perfil",
+                "cambiarContrasena": "Cambiar Contrase\u00F1a",
+                "editarPerfil": "Editar Perfil",
+                "cerrarSesion": "Cerrar Sesi\u00F3n"
+            },
+            "admin": {
+                "main": "Administraci\u00F3n",
+                "user-management": "Gesti\u00F3n de usuarios",
+                "tracker": "Registro de los usuarios",
+                "metrics": "Métricas",
+                "health": "Salud",
+                "configuration": "Configuraci\u00F3n",
+                "logs": "Logs",
+                "audits": "Auditoria",
+                "apidocs": "API",
+                "database": "Base de datos"
+            },
+            "language": "Lenguaje"
+        },
+        "form": {
+            "username": "Nombre de usuario",
+            "username.placeholder": "Su nombre de usuario",
+            "newpassword": "Nueva contrase\u00F1a",
+            "newpassword.placeholder": "Nueva contrase\u00F1a",
+            "confirmpassword": "Confirmar nueva contrase\u00F1a",
+            "confirmpassword.placeholder": "Confirmar nueva contrase\u00F1a",
+            "email": "correo electr\u00F3nico",
+            "email.placeholder": "Su Correo electr\u00F3nico"
+        },
+        "messages": {
+            "info": {
+                "authenticated": "Si desea <a class='alert-link' href='#/login'>ingresar</a>, puede intentar con las cuentas por defecto:<br/>- Administrador (Usuario='admin' and Contrase\u00F1a='admin') <br/>- User (Usuario='user' and Contrase\u00F1a='user').",
+                "register": "No tiene cuenta todav\u00EDa\u003F <a class='alert-link' href='#/register'>Registrar una nueva cuenta</a>"
+            },
+            "error": {
+                "dontmatch": "La contrase\u00F1a y su confirmaci\u00F3n no coinciden \u0021"
+            },
+            "validate": {
+                "newpassword": {
+                    "required": "Su contrase\u00F1a es requerida.",
+                    "minlength": "Su contrase\u00F1a debe tener m\u00EDnimo 5 caracteres.",
+                    "maxlength": "Su contrase\u00F1a no puede ser superior a 50 caracteres .",
+                    "strength": "Seguridad de la contrase\u00F1a"
+                },
+                "confirmpassword": {
+                    "required": "La confirmaci\u00F3n de su contrase\u00F1a es requerida.",
+                    "minlength": "La confirmaci\u00F3n de la contrase\u00F1a debe tener m\u00EDnimo 5 caracteres",
+                    "maxlength": "La confirmaci\u00F3n de su contrase\u00F1a no puede ser superior a 50 caracteres"
+                },
+                "email": {
+                    "required": "Su correo electr\u00F3nico es requerido.",
+                    "invalid": "Su correo electr\u00F3nico no es v\u00E1lido.",
+                    "minlength": "Su correo electr\u00F3nico debe ser m\u00EDnimo de 5 caracteres.",
+                    "maxlength": "Su correo electr\u00F3nico no puede ser superior a 50 caracteres"
+                }
+            }
+        },
+        "field": {
+            "id": "ID"
+        }
+    },
+    "entity": {
+        "action": {
+            "addblob": "Adicionar blob",
+            "addimage": "Adicionar imagen",
+            "back": "Atr\u00E1s",
+            "cancel": "Cancelar",
+            "delete": "Eliminar",
+            "edit": "Editar",
+            "save": "Guardar",
+            "view": "Ver"
+        },
+        "detail": {
+            "field": "Campo",
+            "value": "Valor"
+        },
+        "delete": {
+            "title": "Confirmar operaci\u00F3n de eliminaci\u00F3n"
+        },
+        "validation": {
+            "required": "Este campo es obligatorio.",
+            "minlength": "Este campo es obligatorio que al menos {{min}} caracteres.",
+            "maxlength": "Este campo no puede tener m\u00E1s de {{max}} caracteres.",
+            "min": "Este campo debe ser m\u00E1s de {{min}}.",
+            "max": "Este campo no debe ser m\u00E1s de {{max}}.",
+            "minbytes": "Este campo debe ser m\u00E1s de {{min}} bytes.",
+            "maxbytes": "Este campo no debe ser m\u00E1s de  {{max}} bytes.",
+            "pattern": "Este campo debe seguir el modelo {{pattern}}.",
+            "number": "Este campo debe ser num\u00E9rico.",
+            "datetimelocal": "Este campo debe ser una fecha y hora."
+        }
+    },
+    "error": {
+        "serverNotReachable": "Sin acceso al servidor",
+        "NotNull": "Campo {{fieldName}} no puede ser vac\u00EDo\u0021",
+        "Size": "Campo {{fieldName}} no reune la longitud requerida!",
+        "userexists": "Login ya se encuentra asignado!",
+        "emailexists": "E-mail ya se encuentra asignado!",
+        "idexists": "Un nuevo {{entityName}} no puede tener un ID"
+
+    },
+    "footer": "Este es el pie de p\u00E1gina"
+}
