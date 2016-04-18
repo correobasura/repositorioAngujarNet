@@ -4,6 +4,11 @@ angular.module('AngularAuthApp')
 
 .constant('ENV', 'dev')
 
-.constant('BASE_URL', 'http://localhost:58871/')
+.constant('BASE_URL', 'https://localhost:44384/')
+
+.constant('ngAuthSettings', {
+    apiServiceBaseUri: 'https://localhost:44384/',
+    clientId: 'ClienteAppAuthPrueba'
+})
 
 ;

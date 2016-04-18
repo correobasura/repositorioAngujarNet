@@ -18,7 +18,7 @@
     <AssemblyName>AuthWeb</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
-    <IISExpressSSLPort />
+    <IISExpressSSLPort>44384</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -79,11 +79,13 @@
     <Content Include="app\views\home.html" />
     <Content Include="app\views\login.html" />
     <Content Include="app\views\signup.html" />
+    <Content Include="AuthComplete.html" />
     <Content Include="packages.config" />
     <Content Include="app\controllers\signup.controller.js" />
     <Content Include="app\i18n\es\general.json" />
     <Content Include=".bowerrc" />
     <Content Include="bower.json" />
+    <Content Include="scripts\authComplete.js" />
     <Content Include="wwwroot\lib\angucomplete-alt\angucomplete-alt.css" />
     <Content Include="wwwroot\lib\angucomplete-alt\angucomplete-alt.js" />
     <Content Include="wwwroot\lib\angucomplete-alt\dist\angucomplete-alt.min.js" />
@@ -2409,7 +2411,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>61217</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:61217/</IISUrl>
+          <IISUrl>https://localhost:44384/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

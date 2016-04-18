@@ -144,5 +144,39 @@ namespace AuthSln.API
         {
             return _contexto.RefreshTokens.ToList();
         }
+
+        /// <summary>
+        /// Método que permite buscar un usuario de acuerdo a su información de login
+        /// </summary>
+        /// <param name="loginInfo">Información de login de usuario</param>
+        /// <returns>usuario encontrado</returns>
+        public async Task<IdentityUser> BuscarAsync(UserLoginInfo loginInfo)
+        {
+            IdentityUser user = await _usuarioManager.FindAsync(loginInfo);
+            return user;
+        }
+
+        /// <summary>
+        /// Método que realiza el llamado a la creación de un usuario
+        /// </summary>
+        /// <param name="user">Usuario a crearse</param>
+        /// <returns>resultado de usuario creado</returns>
+        public async Task<IdentityResult> CrearAsync(IdentityUser user)
+        {
+            var result = await _usuarioManager.CreateAsync(user);
+            return result;
+        }
+
+        /// <summary>
+        /// Método que realiza el llamada a agregar un usuario con la información ingresada
+        /// </summary>
+        /// <param name="userId">Identificador del usuario</param>
+        /// <param name="login">Objeto con información de login de usuario</param>
+        /// <returns></returns>
+        public async Task<IdentityResult> AgregarLoginAsync(string userId, UserLoginInfo login)
+        {
+            var result = await _usuarioManager.AddLoginAsync(userId, login);
+            return result;
+        }
     }
 }
