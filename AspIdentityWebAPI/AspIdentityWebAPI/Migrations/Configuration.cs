@@ -1,6 +1,6 @@
 namespace AspIdentityWebAPI.Migrations
 {
-    using Infraestructura;
+    using Infrastructure;
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.EntityFramework;
     using System;
@@ -8,24 +8,30 @@ namespace AspIdentityWebAPI.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<AppDBContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<AspIdentityWebAPI.Infrastructure.ApplicationDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(AspIdentityWebAPI.Infraestructura.AppDBContext context)
+        protected override void Seed(AspIdentityWebAPI.Infrastructure.ApplicationDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 
-            var manager = new UserManager<IdentityUser>(new UserStore<IdentityUser>(new AppDBContext()));
-            var user = new IdentityUser()
+            var manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new ApplicationDbContext()));
+
+            var user = new ApplicationUser()
             {
                 UserName = "SuperPowerUser",
-                Email = "correobasuraregistro@gmail.com",
-                EmailConfirmed = true
+                Email = "taiseer.joudeh@mymail.com",
+                EmailConfirmed = true,
+                FirstName = "Taiseer",
+                LastName = "Joudeh",
+                Level = 1,
+                JoinDate = DateTime.Now.AddYears(-3)
             };
+
             manager.Create(user, "MySuperP@ssword!");
         }
     }
