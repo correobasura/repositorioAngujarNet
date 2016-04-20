@@ -7,8 +7,15 @@ using System.Web;
 
 namespace AspIdentityWebAPI.Infraestructura
 {
+    /// <summary>
+    /// Clase que establece la conexión con el contexto de base de datos y el mapeo de las tablas
+    /// dentro de la misma
+    /// </summary>
     public class AppDBContext : IdentityDbContext<IdentityUser>
     {
+        /// <summary>
+        /// Constructor de la clase
+        /// </summary>
         public AppDBContext()
             : base("AppDBContextConn", throwIfV1Schema: false)
         {
@@ -16,6 +23,10 @@ namespace AspIdentityWebAPI.Infraestructura
             Configuration.LazyLoadingEnabled = false;
         }
 
+        /// <summary>
+        /// Método que llama a la creación de un nuevo contexto
+        /// </summary>
+        /// <returns></returns>
         public static AppDBContext Create()
         {
             return new AppDBContext();
