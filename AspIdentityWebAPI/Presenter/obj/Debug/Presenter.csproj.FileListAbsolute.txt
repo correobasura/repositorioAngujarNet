@@ -1,0 +1,4 @@
+C:\Users\Admin\Documents\GitNet2\AspIdentityWebAPI\Presenter\bin\Debug\Presenter.dll
+C:\Users\Admin\Documents\GitNet2\AspIdentityWebAPI\Presenter\bin\Debug\Presenter.pdb
+C:\Users\Admin\Documents\GitNet2\AspIdentityWebAPI\Presenter\obj\Debug\Presenter.dll
+C:\Users\Admin\Documents\GitNet2\AspIdentityWebAPI\Presenter\obj\Debug\Presenter.pdb
