@@ -1,4 +1,5 @@
 ﻿using AspIdentityWebAPI.Infrastructure;
+using Microsoft.AspNet.Identity.EntityFramework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,6 +42,17 @@ namespace AspIdentityWebAPI.Models
                 JoinDate = appUser.JoinDate,
                 Roles = _AppUserManager.GetRolesAsync(appUser.Id).Result,
                 Claims = _AppUserManager.GetClaimsAsync(appUser.Id).Result
+            };
+        }
+
+        public RoleReturnModel Create(IdentityRole appRole)
+        {
+
+            return new RoleReturnModel
+            {
+                Url = _UrlHelper.Link("GetRoleById", new { id = appRole.Id }),
+                Id = appRole.Id,
+                Name = appRole.Name
             };
         }
     }
